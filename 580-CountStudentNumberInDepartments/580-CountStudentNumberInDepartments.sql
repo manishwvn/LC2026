@@ -1,0 +1,14 @@
+-- Last updated: 8/20/2026, 2:11:11 AM
+SELECT
+    D.DEPT_NAME AS dept_name,
+    COUNT(S.STUDENT_ID) AS student_number
+FROM 
+    DEPARTMENT D
+LEFT JOIN
+    STUDENT S
+ON
+    D.DEPT_ID = S.DEPT_ID
+GROUP BY
+    D.DEPT_NAME
+ORDER BY
+    2 DESC, 1 ASC;

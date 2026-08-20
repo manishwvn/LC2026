@@ -1,0 +1,7 @@
+-- Last updated: 8/20/2026, 1:56:38 AM
+SELECT
+    TEACHER_ID as teacher_id,
+    COUNT(DISTINCT SUBJECT_ID) AS cnt
+FROM
+    TEACHER
+GROUP BY TEACHER_ID;

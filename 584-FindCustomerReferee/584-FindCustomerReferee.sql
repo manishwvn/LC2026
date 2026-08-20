@@ -1,0 +1,8 @@
+-- Last updated: 8/20/2026, 2:11:14 AM
+SELECT 
+    NAME 
+FROM 
+    CUSTOMER
+WHERE 
+    COALESCE(REFEREE_ID, -1) <> 2;
+

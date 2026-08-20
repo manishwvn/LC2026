@@ -1,0 +1,15 @@
+-- Last updated: 8/20/2026, 2:16:27 AM
+WITH CTE AS(
+    SELECT
+        SALARY,
+        DENSE_RANK () OVER (ORDER BY SALARY DESC) AS RANK_DESC
+    FROM
+        EMPLOYEE
+)
+
+SELECT
+    MAX(SALARY) AS SecondHighestSalary
+FROM 
+    CTE
+WHERE
+    RANK_DESC = 2;

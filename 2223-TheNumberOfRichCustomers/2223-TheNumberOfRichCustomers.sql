@@ -1,0 +1,7 @@
+-- Last updated: 8/20/2026, 1:58:12 AM
+SELECT 
+    COUNT(DISTINCT CUSTOMER_ID) AS 'rich_count'
+FROM 
+    STORE
+WHERE
+    AMOUNT > 500;

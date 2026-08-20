@@ -1,0 +1,22 @@
+-- Last updated: 8/20/2026, 2:10:36 AM
+-- select case when count(*) > 0 then max(num)
+--             else null
+--             end as num from (select
+--     num
+-- from
+--     MyNumbers
+-- group by num
+-- having count(num) = 1) as t;
+with singlenums as (
+    select
+        num
+    from
+        mynumbers
+    group by
+        num
+    having count(*) = 1)
+
+select
+    max(num) as num
+from
+    singlenums;

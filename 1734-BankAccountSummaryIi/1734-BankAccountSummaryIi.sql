@@ -1,0 +1,14 @@
+-- Last updated: 8/20/2026, 2:01:20 AM
+SELECT
+    U.NAME AS 'name', 
+    SUM(T.AMOUNT) AS 'balance'
+FROM
+    USERS U
+INNER JOIN
+    TRANSACTIONS T
+ON 
+    U.ACCOUNT = T.ACCOUNT
+GROUP BY
+    U.ACCOUNT
+HAVING
+    balance > 10000;

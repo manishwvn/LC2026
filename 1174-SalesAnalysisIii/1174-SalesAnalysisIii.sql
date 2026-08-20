@@ -1,0 +1,14 @@
+-- Last updated: 8/20/2026, 2:05:44 AM
+SELECT  
+    P.PRODUCT_ID AS 'product_id',
+    P.PRODUCT_NAME AS 'product_name'
+FROM 
+    PRODUCT P
+INNER JOIN
+    SALES S
+ON 
+    P.PRODUCT_ID  = S.PRODUCT_ID
+GROUP BY
+    S.PRODUCT_ID
+HAVING 
+    MIN(S.SALE_DATE) >= '2019-01-01' AND MAX(S.SALE_DATE) <= '2019-03-31';

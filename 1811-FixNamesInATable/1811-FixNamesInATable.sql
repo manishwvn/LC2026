@@ -1,0 +1,7 @@
+-- Last updated: 8/20/2026, 2:00:41 AM
+SELECT
+    USER_ID as user_id,
+    CONCAT(UPPER(SUBSTRING(NAME, 1, 1)), LOWER(SUBSTRING(NAME, 2))) AS name
+FROM
+    USERS
+ORDER BY 1;

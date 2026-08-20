@@ -1,0 +1,12 @@
+# Last updated: 8/20/2026, 2:13:45 AM
+class Solution(object):
+    def intersect(self, nums1, nums2):
+        counts = Counter(nums1)
+        result = []
+
+        for num in nums2:
+            if counts[num] > 0:
+                result.append(num)
+                counts[num] -= 1
+
+        return result

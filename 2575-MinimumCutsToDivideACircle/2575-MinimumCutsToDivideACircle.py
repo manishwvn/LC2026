@@ -1,0 +1,9 @@
+# Last updated: 8/20/2026, 1:56:15 AM
+class Solution:
+    def numberOfCuts(self, n: int) -> int:
+        
+        if n == 1: return 0
+        if n % 2 != 0:
+            return n
+        else:
+            return n // 2

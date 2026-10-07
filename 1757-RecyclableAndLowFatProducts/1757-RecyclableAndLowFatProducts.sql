@@ -1,0 +1,7 @@
+-- Last updated: 10/7/2026, 2:53:58 PM
+SELECT 
+    PRODUCT_ID 
+FROM 
+    PRODUCTS
+WHERE 
+    LOW_FATS = 'Y' AND RECYCLABLE = 'Y';

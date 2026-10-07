@@ -1,0 +1,13 @@
+-- Last updated: 10/7/2026, 2:56:24 PM
+SELECT
+    SELL_DATE AS 'sell_date',
+    COUNT(DISTINCT PRODUCT) AS 'num_sold',
+    GROUP_CONCAT( DISTINCT PRODUCT 
+                 ORDER BY PRODUCT) AS 'products'
+FROM 
+    ACTIVITIES
+GROUP BY
+    SELL_DATE
+ORDER BY
+    SELL_DATE;
+    

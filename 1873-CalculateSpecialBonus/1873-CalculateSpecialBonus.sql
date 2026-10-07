@@ -1,0 +1,14 @@
+-- Last updated: 10/7/2026, 2:53:11 PM
+SELECT 
+    EMPLOYEE_ID, 
+IF
+    (EMPLOYEE_ID % 2 = 0 OR NAME LIKE 'M%', 0, SALARY) AS BONUS
+FROM 
+    EMPLOYEES
+ORDER BY
+    EMPLOYEE_ID;
+
+
+
+
+

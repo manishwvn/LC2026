@@ -1,0 +1,9 @@
+-- Last updated: 10/7/2026, 2:51:48 PM
+SELECT
+    PROBLEM_ID AS 'problem_id'
+FROM 
+    PROBLEMS
+WHERE
+    (LIKES / (LIKES + DISLIKES)) * 100 < 60
+ORDER BY
+    PROBLEM_ID;
